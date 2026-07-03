@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #faf6f5;
+    color: #332a28;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+#contenedor-principal {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.02);
+}
+
+header::after, #Fragancias::after, #Novedades::after, #AcercaDe::after, #Contacto::after, footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(51, 42, 40, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+}
+
+#marca {
+    float: left;
+}
+
+#marca h1 {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+nav {
+    float: right;
+    margin-top: 0.3rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    float: left;
+    margin-left: 2.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #61524e;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e5b3a3;
+    transform: translateY(-2px);
+}
+
+#Inicio {
+    width: 100%;
+    height: 600px;
+    background-image: url('../imagenes/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation: zoomSuave 2s ease-out;
+}
+
+@keyframes zoomSuave {
+    0% { opacity: 0; transform: scale(1.03); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.banner-contenido {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 3rem;
+    max-width: 420px;
+    border-radius: 4px;
+}
+
+.banner-contenido h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+#Fragancias, #Novedades {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+#Novedades {
+    flex-direction: row-reverse;
+}
+
+.bloque-texto {
+    width: 50%;
+    float: left;
+    padding: 3rem;
+    flex: 1;
+}
+
+.bloque-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bloque-texto p {
+    font-size: 1rem;
+    color: #5c4d49;
+    line-height: 1.6;
+}
+
+.bloque-imagen {
+    width: 536px;
+    flex-shrink: 0;
+}
+.bloque-imagen img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #e8dad5;
+    box-shadow: 0 8px 24px rgba(51, 42, 40, 0.06);
+    transition: transform 0.4s ease;
+}
+
+.bloque-imagen img {
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.6s ease;
+}
+
+.bloque-imagen img:hover {
+    transform: scale(1.02);
+}
+
+#Novedades .bloque-imagen { float: left; }
+#Novedades .bloque-texto { float: right; }
+
+#AcercaDe {
+    width: 100%;
+    padding: 6rem 4rem;
+    background-color: #fdfaf9;
+}
+
+#AcercaDe h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.sub-coleccion-titulo {
+    width: 100%;
+    float: left;
+    clear: both;
+    text-align: center;
+    margin-bottom: 3rem 0 1.5rem 0;
+}
+
+
+.sub-coleccion-titulo h3 {
+    font-size: 1.6rem;
+    color: #e5b3a3;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #f5ebe8;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.pastilla {
+    width: 30%;
+    float: left;
+    margin:10%;
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    text-align: center;
+    border:2px solid #f5ebe8;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease; 
+}
+
+.pastilla:hover {
+    border-color: #e5b3a3;
+    box-shadow: 0 15px 30px rgba(229, 179, 163, 0.1);
+}
+
+.pastilla img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #f5ebe8;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pastilla:hover img {
+    transform: rotateY(180deg) scale(1.05);
+}
+
+.pastilla h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+}
+
+.pastilla p {
+    font-size: 0.9rem;
+    color: #7a6661;
+}
+
+#Patrocinio {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#Patrocinio h2 {
+    font-family: 'Mallanna', sans-serif;
+    margin-bottom: 30px;
+    color: #332a28;
+}
+
+.contenedor-patrocinio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+}
+
+.contenedor-patrocinio img {
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    ;
+}
+
+.contenedor-patrocinio img:hover {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.08);
+}
+
+.banner-publicidad {
+    width: 22%;
+    float: left;
+    margin: 1.5%;
+}
+
+.banner-publicidad img {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.banner-publicidad img:hover {
+    opacity: 1;
+}
+
+footer {
+    width: 100%;
+    padding: 5rem 4rem;
+    background-color: #241c1a;
+    color: #f5ebe8;
+}
+
+.autor-info {
+    width: 60%;
+    float: left;
+}
+
+.autor-info img {
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 2rem;
+    border: 2px solid #e5b3a3;
+}
+
+.autor-info p {
+    font-size: 0.85rem;
+    color: #baaaab;
+    margin-bottom: 0.3rem;
+}
+
+.autor-info p strong {
+    color: #ffffff;
+    font-size: 1.05rem;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e8dad5;
+    border-radius: 30px;
+    width: max-content;
+    margin: 40px auto;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+
+.redes-sociales a img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: block;
+}
+
+.redes-sociales a img:hover {
+    transform: scale(1.15);
+    transition: transform 0.2s ease;
+}
+
+.cursada-info {
+    width: 35%;
+    float: left;
+    padding-left: 2rem;
+    border-left: 1px solid #3d312e;
+}
+
+.cursada-info h3, .redes-sociales h3 {
+    font-size: 1rem;
+    color: #e5b3a3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cursada-info p {
+    font-size: 0.85rem;
+    color: #baaaab;
+    margin-bottom: 0.3rem;
+}
+
+.autor-info {
+    width: 35%;
+    float: left;
+}
+
+.redes-sociales {
+    width: 30%;
+    float: right;
+    text-align: right;
+    margin-top: 0;
+}
+
+.integrante {
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.pastilla .precio {
+    display: block;
+    font-size: 1.1rem;
+    color: #b88775;
+    font-weight: 700;
+    margin: 0.3rem 0 0.6rem 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contenedor-pastillas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+body {
+    background-image: url('../imagenes/backfoto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.conectate h3 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #e8dad5;
+}
